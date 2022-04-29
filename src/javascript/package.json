@@ -1,0 +1,15 @@
+{
+  "name": "hash-metrics",
+  "version": "1.0.0",
+  "description": "Calculates metrics on hash size to use",
+  "main": "metrics.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC"
+}

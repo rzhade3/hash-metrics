@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 
 function calculateAverageHashingTime(saltRounds) {
-  const samples = 5; // number of samples to take
+  const samples = 10; // number of samples to take
   var total_time = 0;
   for (let i = 0; i < samples; i++){
     // Generate a new password on each loop to test the average time
@@ -16,13 +16,13 @@ function calculateAverageHashingTime(saltRounds) {
 }
 
 function parseHrtimeToSeconds(hrtime) {
-  var seconds = (hrtime[0] + (hrtime[1] / 1e9));
+  var seconds = ((hrtime[0] * 1000000000) + hrtime[1]) / 1000000;
   return seconds;
 }
 
-const saltRoundsToEval = [8, 10, 12, 15, 18, 20]
+const saltRoundsToEval = [8, 10, 12, 15]
 
 saltRoundsToEval.forEach((saltRounds) => {
   const time = calculateAverageHashingTime(saltRounds);
-  console.log(`Average hashing time for ${saltRounds} rounds: ${time.toFixed(6)} seconds`);
+  console.log(`${saltRounds}, ${time.toFixed(6)} ms`);
 });

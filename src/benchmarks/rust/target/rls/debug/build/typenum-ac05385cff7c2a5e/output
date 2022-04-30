@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/workspaces/hash-metrics/src/rust/target/rls/debug/build/typenum-ac05385cff7c2a5e/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/workspaces/hash-metrics/src/rust/target/rls/debug/build/typenum-ac05385cff7c2a5e/out/op.rs

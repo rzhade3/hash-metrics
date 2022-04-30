@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": ""
+    "benchmark": "node metrics.js"
   },
   "author": "",
   "license": "ISC"

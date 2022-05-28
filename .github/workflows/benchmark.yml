@@ -28,18 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run Python benchmarks
         run: |
-          cd src/benchmarks/python
+          cd src/
           pip3 install -r requirements.txt
-          python3 metrics.py
-
-      # Runs a set of commands using the runners shell
-      - name: Run Node benchmarks
-        run: |
-          cd src/benchmarks/javascript
-          npm install
-          npm run benchmark
-      
-      - name: Run Rust benchmarks
-        run: |
-          cd src/benchmarks/rust
-          cargo run
+          python3 metrics.py find_best_params bcrypt --time_cost 0.5

@@ -30,4 +30,4 @@ jobs:
         run: |
           cd src/
           pip3 install -r requirements.txt
-          python3 metrics.py find_best_params bcrypt --time_cost 0.5
+          python3 metrics.py bcrypt --time_cost 0.5
